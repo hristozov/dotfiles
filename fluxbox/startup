@@ -1,0 +1,42 @@
+#!/bin/sh
+#
+# fluxbox startup-script:
+#
+# Lines starting with a '#' are ignored.
+
+# Change your keymap:
+xmodmap "/home/gh/.Xmodmap"
+/usr/bin/synclient TapButton1=1
+/usr/bin/setxkbmap -layout "us,bg" -option "grp:alt_shift_toggle"
+/usr/bin/fbsetbg ~/wallpaper/wallpaper
+/usr/bin/amixer sset Headphone,0 100%
+/usr/bin/amixer sset Speaker,0 100%
+/usr/bin/amixer sset PCM,0 100%
+export BROWSER=/usr/bin/chromium
+
+# Applications you want to run with fluxbox.
+# MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
+#
+# unclutter -idle 2 &
+# wmnd &
+# wmsmixer -w &
+# idesk &
+
+xscreensaver &
+parcellite &
+dropbox start -i
+#psi &
+#skype &
+kmix &
+#(sleep 10; wicd-client) &
+#wicd-client &
+#exec ck-launch-session sudo nm-applet &
+sudo nm-applet &
+conky &
+#eval "$(gpg-agent --daemon)" &
+# And last but not least we start fluxbox.
+# Because it is the last app you have to run it with ''exec'' before it.
+
+exec fluxbox
+# or if you want to keep a log:
+# exec fluxbox -log "/home/gh/.fluxbox/log"
