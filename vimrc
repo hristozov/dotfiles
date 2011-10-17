@@ -29,9 +29,14 @@ set listchars=tab:>-
 set laststatus=2
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]%=[%=POS=%03l,%03c][%p%%]\ [LEN=%L
 
-set nocompatible               " be iMproved
-"filetype off                   " required!
+set autoindent
+set smarttab
 
+"vundle shit...
+set nocompatible               " be iMproved
+filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+Bundle 'gmarik/vundle'
 Bundle 'vim-ruby/vim-ruby'
+filetype plugin indent on
