@@ -38,8 +38,7 @@ filetype on
 filetype indent on
 filetype plugin on
 
-"vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'vim-ruby/vim-ruby'
+autocmd BufRead,BufNewFile   *.rb set sw=2 ts=2 expandtab
+
+call pathogen#infect() 
+
