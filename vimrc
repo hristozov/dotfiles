@@ -38,7 +38,11 @@ filetype on
 filetype indent on
 filetype plugin on
 
-autocmd BufRead,BufNewFile   *.rb set sw=2 ts=2 expandtab
+"autocmd BufRead,BufNewFile   *.rb set sw=2 ts=2 expandtab
+au FileType ruby set sw=2 ts=2 expandtab
+
+highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
+"match OverLength /\%81v.*/
 
 call pathogen#infect() 
 

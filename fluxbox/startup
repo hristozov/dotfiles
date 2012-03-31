@@ -29,7 +29,7 @@ dropbox start -i
 #skype &
 kmix &
 #(sleep 10; wicd-client) &
-#wicd-client &
+wicd-client &
 #exec ck-launch-session sudo nm-applet &
 sudo nm-applet &
 conky &
