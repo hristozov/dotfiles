@@ -81,9 +81,11 @@ source /etc/profile.d/autojump.zsh
 bindkey '\eOH' beginning-of-line
 bindkey '\eOF' end-of-line
 
-#[[ -s "/home/gh/.rvm/scripts/rvm" ]] && source "/home/gh/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+[[ -s "/home/gh/.rvm/scripts/rvm" ]] && source "/home/gh/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 CCACHE_SLOPPINESS="time_macros"
 
 /usr/bin/fortune
 cd ~
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
