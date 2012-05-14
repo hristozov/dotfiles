@@ -1,46 +1,6 @@
-CCACHE_DIR="/var/tmp/ccache"
-HISTFILE=~/.histfile
-HISTSIZE=100000
-SAVEHIST=100000
-
-C_INCLUDE_PATH="/usr/include/libowfat/"
-
 autoload -Uz compinit
 compinit
-
 autoload colors; colors
-export PS1="%B%F{green}%n@%m%k %B%F{blue}%~ %# %b%f%k"
-export PAGER="/usr/bin/most" #set in env.d
-alias ls='ls --color=auto'
-alias grep='grep --colour=auto'
-
-alias emerge='sudo nice -n10 emerge'
-alias emerge-upd='sudo nice -n20 emerge --keep-going -DuN world'
-alias reboot='sudo reboot'
-alias halt='sudo halt'
-alias acpitool='sudo acpitool'
-alias make='nice -n20 make -j4'
-alias ccache='CCACHE_DIR=/var/tmp/ccache ccache'
-alias wgc='wget -c'
-alias fb='ssh -p2212 gh@forkbomb.nl'
-alias straxil='ssh gogo@straxil.asteasolutions.net'
-alias on='ssh-add -t 1800'
-alias off='ssh-add -D'
-alias l='ls -l'
-alias la='ls -al'
-alias v='vi'
-alias s='sudo'
-alias t='tmux'
-alias el='equery l'
-alias em='equery m'
-alias emu='sudo nice -n10 emerge --autounmask-write'
-alias ta='tmux attach'
-alias revdep='sudo nice -n20 revdep-rebuild'
-alias ctorrent='ctorrent -p 33222'
-alias mem='sudo zsh -c "echo mem > /sys/power/state"'
-alias disk='sudo zsh -c "echo disk > /sys/power/state"'
-
-PATH="/opt/vmware/sbin/:/opt/vmware/lib/vmware/bin/:/opt/bin:/usr/games/bin:/usr/lib64/ccache/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:${PATH}"
 
 setopt  autocd autopushd  pushdignoredups
 
@@ -84,11 +44,48 @@ source /etc/profile.d/autojump.zsh
 bindkey '\eOH' beginning-of-line
 bindkey '\eOF' end-of-line
 
-[[ -s "/home/gh/.rvm/scripts/rvm" ]] && source "/home/gh/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+export PS1="%B%F{green}%n@%m%k %B%F{blue}%~ %# %b%f%k"
+export PAGER="/usr/bin/most" #set in env.d
+export CCACHE_DIR="/var/tmp/ccache"
+export HISTFILE=~/.histfile
+export HISTSIZE=100000
+export SAVEHIST=100000
+export C_INCLUDE_PATH="/usr/include/libowfat/"
+export CCACHE_SLOPPINESS="time_macros"
+export PATH="/opt/vmware/sbin/:/opt/vmware/lib/vmware/bin/:/opt/bin:/usr/games/bin:/usr/lib64/ccache/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:${PATH}"
 
-CCACHE_SLOPPINESS="time_macros"
+alias ls='ls --color=auto'
+alias grep='grep --colour=auto'
+alias emerge='sudo nice -n10 emerge'
+alias emerge-upd='sudo nice -n20 emerge --keep-going -DuN world'
+alias reboot='sudo reboot'
+alias halt='sudo halt'
+alias acpitool='sudo acpitool'
+alias make='nice -n20 make -j4'
+alias ccache='CCACHE_DIR=/var/tmp/ccache ccache'
+alias wgc='wget -c'
+alias fb='ssh -p2212 gh@forkbomb.nl'
+alias straxil='ssh gogo@straxil.asteasolutions.net'
+alias on='ssh-add -t 1800'
+alias off='ssh-add -D'
+alias l='ls -l'
+alias la='ls -al'
+alias v='vi'
+alias s='sudo'
+alias t='tmux'
+alias el='equery l'
+alias em='equery m'
+alias emu='sudo nice -n10 emerge --autounmask-write'
+alias ta='tmux attach'
+alias revdep='sudo nice -n20 revdep-rebuild'
+alias ctorrent='ctorrent -p 33222'
+alias mem='sudo zsh -c "echo mem > /sys/power/state"'
+alias disk='sudo zsh -c "echo disk > /sys/power/state"'
+
+[[ -s "/home/gh/.rvm/scripts/rvm" ]] && source "/home/gh/.rvm/scripts/rvm"
+export PATH=$PATH:$HOME/.rvm/bin
 
 /usr/bin/fortune
+# ignore the current directory...
 cd ~
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
