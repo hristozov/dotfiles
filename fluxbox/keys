@@ -122,13 +122,9 @@ Control Mod4 F12 :TakeToWorkspace 12
 
 Control Mod1 Up :Exec amixer sset Master,0 5%+  
 Control Mod1 Down :Exec amixer sset Master,0 5%-  
-#Control Mod1 T :Exec urxvt -bg black -fg green -sr
-#Control Mod1 T :Exec konsole
-#Control Mod1 T :Exec evilvte
 Control Mod1 T :Exec evilvte -e zsh
 Control Mod1 H :Exec dolphin
 #Control Mod1 F :Exec firefox
-#Control Mod1 A :Exec amarok
 Control Mod1 C :Exec chromium-browser
 Control Mod1 K :Exec krusader
 Control Mod1 L :Exec evilvte -e mc
