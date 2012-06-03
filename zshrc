@@ -85,6 +85,8 @@ alias disk='sudo zsh -c "echo disk > /sys/power/state"'
 [[ -s "/home/gh/.rvm/scripts/rvm" ]] && source "/home/gh/.rvm/scripts/rvm"
 export PATH=$PATH:$HOME/.rvm/bin
 
+unset RUBYOPT # the ruby ebuild is screwing up rvm
+
 /usr/bin/fortune
 # ignore the current directory...
 cd ~
