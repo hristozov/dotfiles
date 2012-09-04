@@ -144,11 +144,10 @@ Control Mod1 Pause :ExecCommand xscreensaver-command -lock&
 #Super_L M :Maximize
 #Super_L Esc :ShowDesktop
 
-Mod4 Right :Exec exaile -n
-Mod4 Left :Exec exaile -p
-Mod4 Down :Exec exaile -t
+Mod4 D :ShowDesktop
+Mod4 Up :Maximize
+Mod4 Down :Minimize
 Print :Exec ksnapshot
-
 
 
 
