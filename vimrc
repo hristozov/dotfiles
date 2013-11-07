@@ -21,7 +21,7 @@ set list
 set listchars=tab:>-
 
 set laststatus=2
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]%=[%=POS=%03l,%03c][%p%%]\ [LEN=%L
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]%=[%=POS=%03l,%03c][%p%%]\ [LEN=%L]
 
 set autoindent
 set smarttab
@@ -38,5 +38,8 @@ au FileType ruby set sw=2 ts=2 expandtab
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
 "match OverLength /\%81v.*/
 
-call pathogen#infect() 
+set clipboard=unnamedplus
+au BufRead *.txt setlocal spell spelllang=bg,en
+au BufRead *.md setlocal spell spelllang=bg,en
+au BufRead,BufNewFile *.md set filetype=markdown
 
