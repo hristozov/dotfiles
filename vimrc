@@ -1,6 +1,8 @@
 set guifont=Monospace\ 8
 colorscheme elflord
 
+set backspace=start,eol,indent
+
 set directory=~/.vim/tmp
 
 vmap <C-c> y<Esc>i
