@@ -1,0 +1,30 @@
+"*":
+  "exception-reporting":
+    userId: "a0604fbf-aa31-9cfe-17f6-bae5f2fdca20"
+  welcome:
+    showOnStartup: false
+  core:
+    themes: [
+      "one-light-ui"
+      "solarized-light-syntax"
+    ]
+    disabledPackages: [
+      "scheme-syntax"
+      "symbol-gen"
+    ]
+  editor:
+    invisibles: {}
+    fontSize: 13
+  "atom-beautify":
+    _analyticsUserId: "024a507f-b4e6-49b9-9309-c4816f1f248d"
+  "ide-haskell": {}
+  "haskell-ghc-mod":
+    additionalPathDirectories: [
+      "/Users/gh/.cabal/bin"
+    ]
+    ghcModPath: "/Users/gh/.cabal/bin/ghc-mod"
+    ghcModiPath: "/Users/gh/.cabal/bin/ghc-modi"
+  "linter-shellcheck":
+    shellcheckExecutablePath: "/usr/local/bin/shellcheck"
+  "go-plus":
+    goPath: "/Users/gh/gocode"
