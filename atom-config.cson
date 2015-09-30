@@ -28,3 +28,10 @@
     shellcheckExecutablePath: "/usr/local/bin/shellcheck"
   "go-plus":
     goPath: "/Users/gh/gocode"
+  source:
+    javascript:
+      editor:
+        tabLength: 4
+    json:
+      editor:
+        tabLength: 4
