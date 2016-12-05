@@ -40,8 +40,11 @@ au FileType ruby set sw=2 ts=2 expandtab
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
 "match OverLength /\%81v.*/
 
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 au BufRead *.txt setlocal spell spelllang=bg,en
 au BufRead *.md setlocal spell spelllang=bg,en
 au BufRead,BufNewFile *.md set filetype=markdown
 
+if $TMUX == ''
+  set clipboard+=unnamed
+endif
