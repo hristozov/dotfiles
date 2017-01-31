@@ -1,6 +1,6 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "editor.rulers": [80],
+    "editor.rulers": [100],
     "search.exclude": {
         "**/.git": true,
         "**/node_modules": true,
@@ -10,5 +10,8 @@
         ".deploy": true
     },
     "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "window.zoomLevel": 0,
+    "editor.wordWrap": true,
+    "haskell.ghcMod.executablePath": "/Users/gh/.cabal/bin/ghc-mod"
 }
