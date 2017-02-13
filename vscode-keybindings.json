@@ -1,5 +1,6 @@
 // Place your key bindings in this file to overwrite the defaults
 [
     { "key": "ctrl+[",                 "command": "workbench.action.focusFirstEditorGroup" },
-    { "key": "ctrl+]",                 "command": "workbench.action.focusSecondEditorGroup" }
+    { "key": "ctrl+]",                 "command": "workbench.action.focusSecondEditorGroup" },
+    { "key": "shift+cmd+f",           "command": "-workbench.view.search" }
 ]
