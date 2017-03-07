@@ -13,5 +13,6 @@
     "files.insertFinalNewline": true,
     "window.zoomLevel": 0,
     "editor.wordWrap": true,
-    "haskell.ghcMod.executablePath": "/Users/gh/.cabal/bin/ghc-mod"
+    "haskell.ghcMod.executablePath": "/Users/gh/.cabal/bin/ghc-mod",
+    "workbench.colorTheme": "Monokai"
 }
