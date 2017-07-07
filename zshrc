@@ -45,7 +45,7 @@ ZSH_THEME="forkbomb"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(ansible aws brew docker gem git git-extras git-prompt grunt lein mvn npm node osx rails ruby rvm sublime svn vagrant my-git-aliases)
+plugins=(ansible aws brew docker gem git git-extras git-prompt grunt lein mvn npm node osx rails ruby rvm sublime svn vagrant yarn my-git-aliases)
 
 source $ZSH/oh-my-zsh.sh
 
