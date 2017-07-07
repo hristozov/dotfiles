@@ -15,5 +15,8 @@
     "editor.wordWrap": true,
     "haskell.ghcMod.executablePath": "/Users/gh/.cabal/bin/ghc-mod",
     "workbench.colorTheme": "Monokai",
-    "editor.renderWhitespace": "all"
+    "editor.renderWhitespace": "all",
+    "gitlens.blame.annotation.activeLine": "off",
+    "gitlens.codeLens.visibility": "ondemand",
+    "gitlens.blame.line.enabled": false
 }
