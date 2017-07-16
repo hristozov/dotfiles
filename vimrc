@@ -1,5 +1,5 @@
 set guifont=Monospace\ 8
-colorscheme elflord
+colorscheme default
 
 set backspace=start,eol,indent
 
