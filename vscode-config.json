@@ -8,6 +8,7 @@
         "**/bower_components": true,
         "**/tmp": true,
         "**/dist": true,
+        "**/coverage": true,
         "_site": true,
         ".deploy": true
     },
