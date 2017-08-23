@@ -2,6 +2,7 @@
 {
     "editor.rulers": [100],
     "search.exclude": {
+        "**/.idea": true,
         "**/.yarn-cache": true,
         "**/.git": true,
         "**/node_modules": true,
