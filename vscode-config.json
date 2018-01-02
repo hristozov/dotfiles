@@ -1,6 +1,8 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "editor.rulers": [100],
+    "editor.rulers": [
+        100
+    ],
     "search.exclude": {
         "**/.idea": true,
         "**/.yarn-cache": true,
@@ -13,14 +15,23 @@
         "_site": true,
         ".deploy": true
     },
-    "files.trimTrailingWhitespace": true,
+    "editor.fontSize": 12,
+    "editor.formatOnSave": false,
+    "editor.renderWhitespace": "boundary",
+    "editor.wordWrap": "on",
     "files.insertFinalNewline": true,
-    "window.zoomLevel": 0,
-    "editor.wordWrap": true,
+    "files.trimTrailingWhitespace": true,
+    "gitlens.blame.line.enabled": false,
+    "gitlens.codeLens.locations": [
+        "document"
+    ],
     "haskell.ghcMod.executablePath": "/Users/gh/.cabal/bin/ghc-mod",
-    "workbench.colorTheme": "Solarized Light",
-    "editor.renderWhitespace": "all",
-    "gitlens.blame.annotation.activeLine": "off",
-    "gitlens.codeLens.visibility": "ondemand",
-    "gitlens.blame.line.enabled": false
+    "javascript.format.enable": false,
+    "tslint.alwaysShowStatus": true,
+    "tslint.enable": true,
+    "tslint.autoFixOnSave": true,
+    "tslint.packageManager": "yarn",
+    "typescript.format.enable": false,
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Solarized Light"
 }
