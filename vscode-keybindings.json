@@ -80,5 +80,15 @@
     {
         "key": "shift+cmd+e",
         "command": "-workbench.view.explorer"
+    },
+    {
+        "key": "cmd+backspace",
+        "command": "editor.action.deleteLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+cmd+k",
+        "command": "-editor.action.deleteLines",
+        "when": "editorTextFocus && !editorReadonly"
     }
 ]
