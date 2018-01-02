@@ -33,5 +33,6 @@
     "tslint.packageManager": "yarn",
     "typescript.format.enable": false,
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "Solarized Light"
+    "workbench.colorTheme": "Solarized Light",
+    "workbench.editor.enablePreview": false
 }
