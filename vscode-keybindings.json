@@ -1,10 +1,20 @@
 // Place your key bindings in this file to overwrite the defaults
 [
-    { "key": "ctrl+[",                 "command": "workbench.action.focusFirstEditorGroup" },
-    { "key": "ctrl+]",                 "command": "workbench.action.focusSecondEditorGroup" },
+    {
+        "key": "ctrl+[",
+        "command": "workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "ctrl+]",
+        "command": "workbench.action.focusSecondEditorGroup"
+    },
     {
         "key": "shift+cmd+f",
         "command": "-workbench.view.search"
+    },
+    {
+        "key": "cmd+2",
+        "command": "workbench.view.search"
     },
     {
         "key": "cmd+b",
@@ -60,6 +70,10 @@
     {
         "key": "cmd+b",
         "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+`",
+        "command": "workbench.action.toggleSidebarVisibility"
     },
     {
         "key": "cmd+1",
@@ -130,5 +144,29 @@
         "key": "ctrl+shift+cmd+right",
         "command": "-editor.action.smartSelect.grow",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+3",
+        "command": "workbench.view.scm"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm"
+    },
+    {
+        "key": "cmd+4",
+        "command": "workbench.view.debug"
+    },
+    {
+        "key": "shift+cmd+d",
+        "command": "-workbench.view.debug"
+    },
+    {
+        "key": "cmd+5",
+        "command": "workbench.view.extensions"
+    },
+    {
+        "key": "shift+cmd+x",
+        "command": "-workbench.view.extensions"
     }
 ]
