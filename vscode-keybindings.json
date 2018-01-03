@@ -106,7 +106,7 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "shift+cmd+up",
+        "key": "shift+alt+up",
         "command": "editor.action.moveLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
     },
@@ -116,7 +116,7 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "shift+cmd+down",
+        "key": "shift+alt+down",
         "command": "editor.action.moveLinesDownAction",
         "when": "editorTextFocus && !editorReadonly"
     },
@@ -168,5 +168,18 @@
     {
         "key": "shift+cmd+x",
         "command": "-workbench.view.extensions"
+    },
+    {
+        "key": "cmd+d",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+cmd+w",
+        "command": "workbench.action.closeOtherEditors"
+    },
+    {
+        "key": "alt+cmd+t",
+        "command": "-workbench.action.closeOtherEditors"
     }
 ]
