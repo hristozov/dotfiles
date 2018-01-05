@@ -31,7 +31,7 @@
     "tslint.enable": true,
     "tslint.autoFixOnSave": true,
     "tslint.packageManager": "yarn",
-    "typescript.format.enable": false,
+    "typescript.format.enable": true,
     "window.zoomLevel": 0,
     "workbench.colorTheme": "Solarized Light",
     "workbench.editor.enablePreview": false,
