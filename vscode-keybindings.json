@@ -245,5 +245,13 @@
     {
         "key": "cmd+t",
         "command": "-workbench.action.showAllSymbols"
+    },
+    {
+        "key": "alt+\\",
+        "command": "workbench.action.splitEditor"
+    },
+    {
+        "key": "cmd+\\",
+        "command": "-workbench.action.splitEditor"
     }
 ]
