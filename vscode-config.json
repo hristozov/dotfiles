@@ -45,5 +45,14 @@
     "workbench.colorTheme": "Solarized Light",
     "workbench.editor.enablePreview": false,
     "ruby.rubocop.onSave": true,
-    "editor.snippetSuggestions": "top"
+    "editor.snippetSuggestions": "top",
+    "rust.mode": "rls",
+    "rust.rustup": {
+        "toolchain": "stable-x86_64-apple-darwin",
+        "nightlyToolchain": "nightly-x86_64-apple-darwin"
+    },
+    "rust.rls": {
+        "executable": "/Users/gh/.cargo/bin/rls",
+        "useRustfmt": true
+    }
 }
