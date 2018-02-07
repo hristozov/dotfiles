@@ -1,8 +1,39 @@
 // Place your settings in this file to overwrite the default settings
 {
+    "editor.fontSize": 12,
+    "editor.formatOnSave": false,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "boundary",
     "editor.rulers": [
         100
     ],
+    "editor.snippetSuggestions": "top",
+    "editor.wordWrap": "on",
+    "explorer.openEditors.visible": 0,
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.idea": true,
+        "**/.nyc_output": true,
+        "**/.svn": true,
+        "**/CVS": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "gitlens.currentLine.enabled": false,
+    "haskell.ghcMod.executablePath": "/Users/gh/.cabal/bin/ghc-mod",
+    "javascript.format.enable": false,
+    "ruby.rubocop.onSave": true,
+    "rust.mode": "rls",
+    "rust.rustup": {
+        "toolchain": "stable-x86_64-apple-darwin",
+        "nightlyToolchain": "nightly-x86_64-apple-darwin"
+    },
+    "rust.rls": {
+        "executable": "/Users/gh/.cargo/bin/rls",
+        "useRustfmt": true
+    },
     "search.exclude": {
         "_site": true,
         ".deploy": true,
@@ -15,27 +46,6 @@
         "**/node_modules": true,
         "**/tmp": true
     },
-    "files.exclude": {
-        "**/.DS_Store": true,
-        "**/.git": true,
-        "**/.hg": true,
-        "**/.idea": true,
-        "**/.nyc_output": true,
-        "**/.svn": true,
-        "**/CVS": true
-    },
-    "editor.fontSize": 12,
-    "editor.formatOnSave": false,
-    "editor.renderWhitespace": "boundary",
-    "editor.wordWrap": "on",
-    "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
-    "gitlens.blame.line.enabled": false,
-    "gitlens.codeLens.locations": [
-        "document"
-    ],
-    "haskell.ghcMod.executablePath": "/Users/gh/.cabal/bin/ghc-mod",
-    "javascript.format.enable": false,
     "tslint.alwaysShowStatus": true,
     "tslint.enable": true,
     "tslint.autoFixOnSave": true,
@@ -44,15 +54,4 @@
     "window.zoomLevel": 0,
     "workbench.colorTheme": "Solarized Light",
     "workbench.editor.enablePreview": false,
-    "ruby.rubocop.onSave": true,
-    "editor.snippetSuggestions": "top",
-    "rust.mode": "rls",
-    "rust.rustup": {
-        "toolchain": "stable-x86_64-apple-darwin",
-        "nightlyToolchain": "nightly-x86_64-apple-darwin"
-    },
-    "rust.rls": {
-        "executable": "/Users/gh/.cargo/bin/rls",
-        "useRustfmt": true
-    }
 }
