@@ -54,5 +54,6 @@
     "typescript.format.enable": true,
     "window.zoomLevel": 0,
     "workbench.colorTheme": "Solarized Light",
-    "workbench.editor.enablePreview": false
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.showTabs": true
 }
