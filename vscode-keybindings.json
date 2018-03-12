@@ -72,7 +72,7 @@
         "command": "-workbench.action.toggleSidebarVisibility"
     },
     {
-        "key": "alt+`",
+        "key": "cmd+escape",
         "command": "workbench.action.toggleSidebarVisibility"
     },
     {

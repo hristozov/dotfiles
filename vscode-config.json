@@ -55,5 +55,7 @@
     "window.zoomLevel": 0,
     "workbench.colorTheme": "Solarized Light",
     "workbench.editor.enablePreview": false,
-    "workbench.editor.showTabs": true
+    "workbench.editor.showTabs": true,
+    "gitlens.keymap": "alternate",
+    "workbench.startupEditor": "newUntitledFile"
 }
