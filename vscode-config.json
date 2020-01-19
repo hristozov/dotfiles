@@ -57,5 +57,8 @@
     "workbench.editor.enablePreview": false,
     "workbench.editor.showTabs": true,
     "gitlens.keymap": "alternate",
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    }
 }
