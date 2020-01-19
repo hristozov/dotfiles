@@ -75,3 +75,5 @@ alias gtd='git tag -d'
 alias ga='git add'
 alias gp='git push'
 alias gl='git pull'
+
+abbr -a -- - 'cd -'
