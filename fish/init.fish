@@ -78,4 +78,6 @@ alias gl='git pull'
 
 abbr -a -- - 'cd -'
 
+alias bubu='brew update && brew outdated && brew upgrade && brew cleanup'
+
 source ~/.profile
