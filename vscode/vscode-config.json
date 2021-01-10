@@ -4,7 +4,7 @@
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "boundary",
     "editor.rulers": [
-        100
+        80
     ],
     "editor.snippetSuggestions": "top",
     "editor.suggestSelection": "first",
@@ -23,28 +23,44 @@
     "typescript.format.enable": true,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "PowerShell ISE",
+    "workbench.colorTheme": "Solarized Light",
     "workbench.editor.enablePreview": false,
     "workbench.editor.showTabs": true,
     "editor.tabSize": 3,
-    "python.jediEnabled": false,
+    "python.jediEnabled": true,
     "rewrap.autoWrap.enabled": false,
     "rewrap.wholeComment": false,
     "explorer.confirmDragAndDrop": false,
     "bazel.buildifierFixOnFormat": true,
     "files.associations": {
-        "BUILD.*": "starlark"
+        "tmp.*": "git-commit",
     },
     "[plaintext]": {
         "editor.rulers": [
             72
         ],
     },
+    "[git-commit]": {
+        "editor.rulers": [
+            76
+        ],
+        "editor.detectIndentation": true,
+        "editor.insertSpaces": false
+    },
     "[python]": {
         "editor.tabSize": 4,
     },
     "[starlark]": {
         "editor.tabSize": 4,
+        "editor.rulers": [
+            80
+        ],
+    },
+    "[bazel]": {
+        "editor.tabSize": 4,
+        "editor.rulers": [
+            80
+        ],
     },
     "terminal.integrated.shell.osx": "/usr/local/bin/fish",
     "java.errors.incompleteClasspath.severity": "ignore",
@@ -62,8 +78,54 @@
         },
         {
             "language": "starlark",
-            "mapTo": "python"
-        }
+            "mapTo": "python",
+        },
+        {
+            "language": "bazel",
+            "mapTo": "python",
+        },
+        {
+            "language": "TypeScript",
+            "begin": "",
+            "prefix": "/* ",
+            "suffix": " */",
+            "end": "",
+            "blankLinesAfter": 1,
+            "forceToTop": true,
+            "lineLength": 10
+        },
     ],
-
+    "shellcheck.executablePath": "/usr/local/bin/shellcheck",
+    "rust.clippy_preference": "on",
+    "python.languageServer": "Jedi",
+    "java.requirements.JDK11Warning": false,
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-1.8",
+            "path": "/build/toolchain/mac32/jdk-1.8.0_201/Contents/Home",
+        },
+    ],
+    "java.home": "/usr/local/opt/openjdk/libexec/openjdk.jdk/Contents/Home",
+    "gitlens.blame.avatars": false,
+    "gitlens.hovers.avatars": false,
+    "gitlens.defaultDateStyle": "absolute",
+    "customizeUI.stylesheet": {
+        ".editor-actions": "display: none !important;",
+        // ".actions-container[aria-label='Editor actions']": "display: none !important;"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "gitlens.codeLens.enabled": false,
+    "extensions.ignoreRecommendations": true,
+    "ruby.format": "rubocop",
+    "ruby.lint": {
+    "rubocop": true
+    },
+    "ruby.useBundler": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single",
+    "gitlens.menus": false,
 }
