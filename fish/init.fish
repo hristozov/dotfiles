@@ -77,3 +77,5 @@ alias gp='git push'
 alias gl='git pull'
 
 abbr -a -- - 'cd -'
+
+source ~/.profile
