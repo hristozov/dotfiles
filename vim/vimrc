@@ -48,6 +48,9 @@ au BufRead COMMIT_EDITMSG setlocal spell spelllang=en
 au BufRead /private/tmp/tmp.* setlocal spell spelllang=en
 au BufRead,BufNewFile *.md set filetype=markdown
 
+au FileType gitcommit setlocal tw=72
+setlocal tw=80
+
 if $TMUX == ''
   set clipboard+=unnamed
 endif
