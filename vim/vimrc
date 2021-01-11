@@ -43,6 +43,9 @@ highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
 "set clipboard=unnamedplus
 au BufRead *.txt setlocal spell spelllang=bg,en
 au BufRead *.md setlocal spell spelllang=bg,en
+au BufRead COMMIT_EDITMSG setlocal spell spelllang=en
+" Mainly to cover p4
+au BufRead /private/tmp/tmp.* setlocal spell spelllang=en
 au BufRead,BufNewFile *.md set filetype=markdown
 
 if $TMUX == ''
