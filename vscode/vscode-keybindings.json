@@ -1,3 +1,4 @@
+// Place your key bindings in this file to override the defaultsauto[]
 [
     {
         "key": "cmd+[",
@@ -112,5 +113,23 @@
     {
         "key": "cmd+d",
         "command": "editor.action.duplicateSelection"
+    },
+    {
+        "key": "shift+alt+l",
+        "command": "editor.action.sortLinesAscending"
+    },
+    {
+        "key": "cmd+2",
+        "command": "-workbench.action.focusSecondEditorGroup"
+    },
+    {
+        "key": "cmd+2",
+        "command": "workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm",
+        "when": "workbench.scm.active"
     },
 ]

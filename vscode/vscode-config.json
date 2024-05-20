@@ -1,131 +1,191 @@
 {
-    "editor.fontSize": 12,
-    "editor.formatOnSave": false,
-    "editor.minimap.enabled": false,
-    "editor.renderWhitespace": "boundary",
-    "editor.rulers": [
-        80
-    ],
-    "editor.snippetSuggestions": "top",
-    "editor.suggestSelection": "first",
-    "editor.wordWrap": "on",
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
+  "editor.formatOnSave": false,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [80],
+  "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "first",
+  "editor.wordWrap": "on",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true,
+    "**/.npm-cache": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "git.path": "/usr/local/bin/git",
+  "javascript.format.enable": false,
+  "tslint.packageManager": "npm",
+  "typescript.format.enable": true,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.colorTheme": "Quiet Light",
+  "workbench.editor.showTabs": "multiple",
+  "editor.tabSize": 3,
+  "python.jediEnabled": true,
+  "rewrap.autoWrap.enabled": false,
+  "rewrap.wholeComment": false,
+  "explorer.confirmDragAndDrop": false,
+  "bazel.buildifierFixOnFormat": true,
+  "files.associations": {
+    "tmp.*": "git-commit"
+  },
+  "[plaintext]": {
+    "editor.rulers": [72]
+  },
+  "[git-commit]": {
+    "editor.rulers": [76],
+    "editor.detectIndentation": true,
+    "editor.insertSpaces": false
+  },
+  "[python]": {
+    "editor.tabSize": 4
+  },
+  "[starlark]": {
+    "editor.tabSize": 4,
+    "editor.rulers": [80]
+  },
+  "[bazel]": {
+    "editor.tabSize": 4,
+    "editor.rulers": [80]
+  },
+  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+  "java.errors.incompleteClasspath.severity": "ignore",
+  "psi-header.config": {
+    "forceToTop": true
+  },
+  "psi-header.lang-config": [
+    {
+      "language": "python",
+      "begin": "",
+      "prefix": "# ",
+      "end": "",
+      "blankLinesAfter": 1,
+      "forceToTop": true
     },
-    "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
-    "git.path": "/usr/local/bin/git",
-    "javascript.format.enable": false,
-    "tslint.packageManager": "npm",
-    "typescript.format.enable": true,
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "window.zoomLevel": 0,
-    "workbench.colorTheme": "Solarized Light",
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.showTabs": true,
-    "editor.tabSize": 3,
-    "python.jediEnabled": true,
-    "rewrap.autoWrap.enabled": false,
-    "rewrap.wholeComment": false,
-    "explorer.confirmDragAndDrop": false,
-    "bazel.buildifierFixOnFormat": true,
-    "files.associations": {
-        "tmp.*": "git-commit",
+    {
+      "language": "starlark",
+      "mapTo": "python"
     },
-    "[plaintext]": {
-        "editor.rulers": [
-            72
-        ],
+    {
+      "language": "bazel",
+      "mapTo": "python"
     },
-    "[git-commit]": {
-        "editor.rulers": [
-            76
-        ],
-        "editor.detectIndentation": true,
-        "editor.insertSpaces": false
-    },
-    "[python]": {
-        "editor.tabSize": 4,
-    },
-    "[starlark]": {
-        "editor.tabSize": 4,
-        "editor.rulers": [
-            80
-        ],
-    },
-    "[bazel]": {
-        "editor.tabSize": 4,
-        "editor.rulers": [
-            80
-        ],
-    },
-    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
-    "java.errors.incompleteClasspath.severity": "ignore",
-    "psi-header.config": {
-        "forceToTop": true,
-    },
-    "psi-header.lang-config": [
-        {
-            "language": "python",
-            "begin": "",
-            "prefix": "# ",
-            "end": "",
-            "blankLinesAfter": 1,
-            "forceToTop": true
-        },
-        {
-            "language": "starlark",
-            "mapTo": "python",
-        },
-        {
-            "language": "bazel",
-            "mapTo": "python",
-        },
-        {
-            "language": "TypeScript",
-            "begin": "",
-            "prefix": "/* ",
-            "suffix": " */",
-            "end": "",
-            "blankLinesAfter": 1,
-            "forceToTop": true,
-            "lineLength": 10
-        },
-    ],
-    "shellcheck.executablePath": "/usr/local/bin/shellcheck",
-    "rust.clippy_preference": "on",
-    "python.languageServer": "Jedi",
-    "java.requirements.JDK11Warning": false,
-    "java.configuration.runtimes": [
-        {
-            "name": "JavaSE-1.8",
-            "path": "/build/toolchain/mac32/jdk-1.8.0_201/Contents/Home",
-        },
-    ],
-    "java.home": "/usr/local/opt/openjdk/libexec/openjdk.jdk/Contents/Home",
-    "gitlens.blame.avatars": false,
-    "gitlens.hovers.avatars": false,
-    "gitlens.defaultDateStyle": "absolute",
-    "customizeUI.stylesheet": {
-        ".editor-actions": "display: none !important;",
-        // ".actions-container[aria-label='Editor actions']": "display: none !important;"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "gitlens.codeLens.enabled": false,
-    "extensions.ignoreRecommendations": true,
-    "ruby.format": "rubocop",
-    "ruby.lint": {
+    // {
+    //   "language": "TypeScript",
+    //   // "begin": "",
+    //   // "prefix": "/* ",
+    //   // "suffix": " */",
+    //   // "end": "",
+    //   // "blankLinesAfter": 1,
+    //   // "forceToTop": true,
+    //   "lineLength": 10
+    // },
+    {
+      "language": "html",
+      "begin": "",
+      "end": "",
+      "prefix": "",
+      "suffix": ""
+    }
+  ],
+  "shellcheck.executablePath": "/usr/local/bin/shellcheck",
+  "rust.clippy_preference": "on",
+  "python.languageServer": "Jedi",
+  "java.requirements.JDK11Warning": false,
+  "java.home": "/usr/local/opt/openjdk/libexec/openjdk.jdk/Contents/Home",
+  "gitlens.blame.avatars": false,
+  "gitlens.hovers.avatars": false,
+  "gitlens.defaultDateStyle": "absolute",
+  "customizeUI.stylesheet": {
+    // ".editor-actions": "display: none !important;",
+    // ".actions-container[aria-label='Editor actions']": "display: none !important;",
+    ".quick-input-widget": "width: 1000px !important;"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "gitlens.codeLens.enabled": false,
+  "extensions.ignoreRecommendations": true,
+  "ruby.format": "rubocop",
+  "ruby.lint": {
     "rubocop": true
-    },
-    "ruby.useBundler": true,
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
-    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
-    "javascript.preferences.quoteStyle": "single",
-    "typescript.preferences.quoteStyle": "single",
-    "gitlens.menus": false,
+  },
+  "ruby.useBundler": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "gitlens.menus": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "explorer.autoReveal": true,
+  "redhat.telemetry.enabled": true,
+  "remote.SSH.connectTimeout": 60,
+  "bsv.bzl.remoteCache.autoLaunch": false,
+  "bsv.bzl.remoteCache.enabled": false,
+  "cSpell.userWords": [
+    "Backends",
+    "localizable",
+    "LOPA",
+    "proxied",
+    "REPA",
+    "servlet",
+    "servlets",
+    "vapi",
+    "Vsphere"
+  ],
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  // "editor.fontFamily": "Comic Mono",
+  // "editor.fontSize": 14,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 13,
+  // "editor.fontFamily": "JuliaMono",
+  // "editor.fontSize": 13,
+  "editor.fontLigatures": true,
+  "git.openDiffOnClick": false,
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "git.autoRepositoryDetection": false,
+  "update.mode": "manual",
+  "telemetry.telemetryLevel": "off",
+  "window.nativeTabs": true,
+  "customizeUI.titleBar": "frameless",
+  "angular.disableAutomaticNgcc": true,
+  "window.titleBarStyle": "native",
+  "git.confirmSync": false,
+  "extensions.autoUpdate": false,
+  "workbench.editor.enablePreview": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "playwright.reuseBrowser": false,
+  "workbench.editor.empty.hint": "hidden",
+  "nxConsole.showNodeVersionOnStartup": false,
+  "editor.accessibilitySupport": "off",
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "typescript.tsserver.log": "off"
 }
