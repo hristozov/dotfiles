@@ -47,6 +47,8 @@ DISABLE_AUTO_UPDATE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(brew docker git git-extras npm node macos my-git-aliases)
 
+zstyle ':omz:alpha:lib:git' async-prompt no
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
