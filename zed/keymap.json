@@ -1,0 +1,31 @@
+[
+  {
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-shift-w": ["pane::CloseInactiveItems", { "close_pinned": false }]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {}
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-[": "pane::GoBack",
+      "cmd-]": "pane::GoForward",
+      "cmd-d": "editor::DuplicateLineUp",
+      "alt-up": "editor::SelectLargerSyntaxNode",
+      "alt-down": "editor::SelectSmallerSyntaxNode"
+    }
+  },
+  {
+    "context": "Pane",
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-[": "pane::GoBack",
+      "cmd-]": "pane::GoForward"
+      // "cmd-shift-w": ["pane::CloseInactiveItems", { "close_pinned": false }]
+    }
+  }
+]
