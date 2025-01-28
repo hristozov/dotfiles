@@ -27,7 +27,8 @@
       "alt-down": "editor::SelectSmallerSyntaxNode",
       "alt-shift-up": "editor::MoveLineUp",
       "alt-shift-down": "editor::MoveLineDown",
-      "cmd-shift-w": ["pane::CloseInactiveItems", { "close_pinned": false }]
+      "cmd-shift-w": ["pane::CloseInactiveItems", { "close_pinned": false }],
+      "alt-shift-f": "editor::Format"
     }
   },
   {
@@ -36,7 +37,8 @@
     "bindings": {
       "cmd-[": "pane::GoBack",
       "cmd-]": "pane::GoForward",
-      "cmd-shift-w": ["pane::CloseInactiveItems", { "close_pinned": false }]
+      "cmd-shift-w": ["pane::CloseInactiveItems", { "close_pinned": false }],
+      "alt-\\": "pane::SplitRight"
     }
   }
 ]
