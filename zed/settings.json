@@ -8,5 +8,6 @@
     "mode": "system",
     "light": "One Light",
     "dark": "Atelier Dune Dark"
-  }
+  },
+  "preferred_line_length": 100
 }

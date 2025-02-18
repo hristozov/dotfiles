@@ -28,7 +28,9 @@
       "alt-shift-up": "editor::MoveLineUp",
       "alt-shift-down": "editor::MoveLineDown",
       "cmd-shift-w": ["pane::CloseInactiveItems", { "close_pinned": false }],
-      "alt-shift-f": "editor::Format"
+      "alt-shift-f": "editor::Format",
+      "alt-shift-l": "editor::SortLinesCaseSensitive",
+      "alt-q": "editor::Rewrap"
     }
   },
   {
