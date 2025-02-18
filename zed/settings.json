@@ -9,5 +9,6 @@
     "light": "One Light",
     "dark": "Atelier Dune Dark"
   },
-  "preferred_line_length": 100
+  "preferred_line_length": 100,
+  "wrap_guides": [100]
 }
