@@ -21,8 +21,10 @@
 	prune = true
 	pruneTags = true
 	all = true
+[commit]
+	verbose = true
 [merge]
-	conflictstyle = diff3
+	conflictstyle = zdiff3
 	algorithm = histogram
 	colorMoved = plain
 	mnemonicPrefix = true
