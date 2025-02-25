@@ -1,7 +1,5 @@
 [core]
 	excludesfile = ~/.gitignore
-[push]
-	default = simple
 [user]
 	name = Georgi Hristozov
 	email = georgi@forkbomb.nl
@@ -9,13 +7,37 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	l = log --graph --oneline --decorate
 	recent = branch --sort=-committerdate -v -a
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
 [pull]
 	ff = only
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
 [merge]
 	conflictstyle = diff3
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
 [rebase]
 	autoSquash = true
+	autoStash = true
+	updateRefs = true
+[rerere]
+	enabled = true
+	autoupdate = true
 [color]
 	diff = auto
+[absorb]
+	maxStack = 20
+	oneFixupPerCommit = true
 
 # vim: filetype=gitconfig
