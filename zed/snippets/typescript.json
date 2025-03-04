@@ -1,0 +1,17 @@
+{
+  "Jasmine describe()": {
+    "prefix": "de",
+    "body": ["describe('$1', () => {", "$0", "})"],
+    "description": "Add a describe()"
+  },
+  "Jasmine it()": {
+    "prefix": "it",
+    "body": ["it('$1', () => {", "$0", "})"],
+    "description": "Add an it()"
+  },
+  "Jasmine beforeEach()": {
+    "prefix": "be",
+    "body": ["beforeEach(() => {", "$0", "})"],
+    "description": "Add a beforeEach()"
+  }
+}
