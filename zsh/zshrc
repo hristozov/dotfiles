@@ -45,7 +45,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew docker git git-extras npm node macos my-git-aliases)
+plugins=(brew git git-extras npm node macos my-git-aliases)
 
 zstyle ':omz:alpha:lib:git' async-prompt no
 
