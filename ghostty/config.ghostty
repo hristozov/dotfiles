@@ -3,3 +3,4 @@ confirm-close-surface = false
 theme = dark:Solarized Dark Higher Contrast,light:iTerm2 Solarized Light
 shell-integration-features = ssh-env,ssh-terminfo
 term = xterm-256color
+window-save-state = always
