@@ -161,8 +161,21 @@ gto() {
 
 git_main_branch () {
   # Allow override with GIT_MAIN_BRANCH for projects that don't use the main/master convention.
-  branch=${GIT_MAIN_BRANCH:-master}
-  echo $branch
+  if [[ -n $GIT_MAIN_BRANCH ]]; then
+    echo $GIT_MAIN_BRANCH
+    return
+  fi
+
+  local branch
+  for branch in main development master; do
+    if git show-ref --quiet --verify refs/heads/$branch 2>/dev/null ||
+        git show-ref --quiet --verify refs/remotes/origin/$branch 2>/dev/null; then
+      echo $branch
+      return
+    fi
+  done
+
+  echo master
 }
 
 # Complete the git helper functions like the git commands they wrap.
