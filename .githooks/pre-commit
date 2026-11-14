@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Refuse commits made with any identity other than the personal one.
+# Enable per clone with: git config core.hooksPath .githooks
+set -euo pipefail
+
+ALLOWED_EMAIL="georgi@forkbomb.nl"
+
+# git var resolves the effective identity, including GIT_AUTHOR_* and
+# GIT_COMMITTER_* overrides from the environment.
+for role in AUTHOR COMMITTER; do
+  email=$(git var GIT_${role}_IDENT | sed -E 's/.*<([^>]*)>.*/\1/')
+  if [[ $email != "$ALLOWED_EMAIL" ]]; then
+    echo "pre-commit: $(tr A-Z a-z <<<"$role") email is <$email>, expected <$ALLOWED_EMAIL>." >&2
+    echo "Fix it with: git config user.email $ALLOWED_EMAIL" >&2
+    exit 1
+  fi
+done
