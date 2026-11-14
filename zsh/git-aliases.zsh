@@ -165,12 +165,8 @@ git_main_branch () {
   echo $branch
 }
 
-# TODO: Move it to a completions file.
-compdef _git gcom=git-checkout
-compdef _git gdm=git-diff
+# Complete the git helper functions like the git commands they wrap.
 compdef _git gdbr=git-diff
-compdef _git gmm=git-merge
-compdef _git gms=git-merge
 compdef _git gb-merged=git-merge
 compdef _git gbdd=git-checkout
 
