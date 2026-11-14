@@ -1,38 +1,73 @@
-# Initialization for various external tools.
+# Initialization for various external tools. Each one is skipped if it's not
+# installed.
 
-command -v direnv >/dev/null && eval "$(direnv hook zsh)"
-command -v fzf >/dev/null && source <(fzf --zsh)
+setup_direnv() {
+  command -v direnv >/dev/null || return
+  eval "$(direnv hook zsh)"
+}
+
+setup_fzf() {
+  command -v fzf >/dev/null || return
+  source <(fzf --zsh)
+}
 
 # nvm is slow to load, so put the newest installed node on PATH and load nvm
 # itself only on first use.
-export NVM_DIR="$HOME/.nvm"
-nvm_node=($NVM_DIR/versions/node/v*(N/nOn[1]))
-[[ -n $nvm_node ]] && path=($nvm_node/bin $path)
-unset nvm_node
-
-nvm() {
-  unfunction nvm
-  local nvm_sh
+setup_nvm() {
+  local nvm_sh nvm_node
   for nvm_sh in /opt/homebrew/opt/nvm/nvm.sh /usr/local/opt/nvm/nvm.sh; do
-    [ -s "$nvm_sh" ] && \. "$nvm_sh" --no-use && break
+    [[ -s $nvm_sh ]] && break
   done
-  nvm "$@"
+  [[ -s $nvm_sh ]] || return
+
+  export NVM_DIR="$HOME/.nvm"
+  nvm_node=($NVM_DIR/versions/node/v*(N/nOn[1]))
+  [[ -n $nvm_node ]] && path=($nvm_node/bin $path)
+
+  eval "nvm() {
+    unfunction nvm
+    \\. ${(q)nvm_sh} --no-use
+    nvm \"\$@\"
+  }"
 }
 
-if [ -x "$HOME/.jenv/bin/jenv" ]; then
-  export PATH="$HOME/.jenv/bin:$PATH"
+setup_jenv() {
+  [[ -x "$HOME/.jenv/bin/jenv" ]] || return
+  path=("$HOME/.jenv/bin" $path)
   eval "$(jenv init -)"
-fi
+}
+
+# Rust toolchain installed by rustup
+setup_cargo() {
+  [[ -s "$HOME/.cargo/env" ]] || return
+  . "$HOME/.cargo/env"
+}
+
+setup_pnpm() {
+  [[ -d "$HOME/Library/pnpm" ]] || return
+  export PNPM_HOME="$HOME/Library/pnpm"
+  path=($PNPM_HOME $path)
+}
 
 # Same for rvm: use its saved default environment and load rvm on first use.
-[[ -s "$HOME/.rvm/environments/default" ]] && source "$HOME/.rvm/environments/default"
-path+="$HOME/.rvm/bin"
-export PATH
+setup_rvm() {
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] || return
+  [[ -s "$HOME/.rvm/environments/default" ]] && source "$HOME/.rvm/environments/default"
+  path+="$HOME/.rvm/bin"
 
-rvm() {
-  unfunction rvm
-  source "$HOME/.rvm/scripts/rvm"
-  rvm "$@"
+  rvm() {
+    unfunction rvm
+    source "$HOME/.rvm/scripts/rvm"
+    rvm "$@"
+  }
 }
+
+for tool in direnv fzf nvm jenv cargo pnpm rvm; do
+  setup_$tool
+  unfunction setup_$tool
+done
+unset tool
+
+export PATH
 
 # vim: et sw=2 sts=2
