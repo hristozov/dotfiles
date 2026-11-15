@@ -22,7 +22,18 @@ autoload -Uz vcs_info add-zsh-hook
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' formats '%b'
 zstyle ':vcs_info:git:*' actionformats '%b|%a'
+zstyle ':vcs_info:git*+set-message:*' hooks git-ahead-behind
 add-zsh-hook precmd vcs_info
+
+# Append ↑ahead/↓behind counts relative to the upstream branch, if there is one.
+function +vi-git-ahead-behind {
+  local counts ahead behind
+  counts=$(git rev-list --left-right --count HEAD...@{upstream} 2>/dev/null) || return 0
+  read ahead behind <<< "$counts"
+  (( ahead )) && hook_com[branch]+=" ↑$ahead"
+  (( behind )) && hook_com[branch]+=" ↓$behind"
+  return 0
+}
 
 PROMPT='$(prompt_string)'
 
