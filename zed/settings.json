@@ -1,4 +1,12 @@
 {
+  "git": {
+    "auto_fetch": {
+      "interval_secs": 60,
+      "enabled": true
+    }
+  },
+  "use_display_p3": false,
+  "cli_default_open_behavior": "new_window",
   "project_panel": {
     "dock": "left"
   },
@@ -10,7 +18,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Atelier Dune Dark"
+    "dark": "Gruvbox Dark Hard"
   },
   "preferred_line_length": 100,
   "wrap_guides": [100]
