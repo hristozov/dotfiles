@@ -1,4 +1,5 @@
 {
+  "disable_ai": true,
   "git": {
     "auto_fetch": {
       "interval_secs": 60,
