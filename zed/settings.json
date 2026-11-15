@@ -1,4 +1,7 @@
 {
+  "project_panel": {
+    "dock": "left"
+  },
   "telemetry": {
     "diagnostics": true
   },
