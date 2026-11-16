@@ -19,7 +19,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Gruvbox Dark Hard"
+    "dark": "One Dark"
   },
   "preferred_line_length": 100,
   "wrap_guides": [100]
