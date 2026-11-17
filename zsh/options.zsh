@@ -42,4 +42,7 @@ bindkey -e
 bindkey '^[[1;5C' forward-word
 bindkey '^[[1;5D' backward-word
 
+autoload -U select-word-style
+select-word-style bash
+
 # vim: et sw=2 sts=2
