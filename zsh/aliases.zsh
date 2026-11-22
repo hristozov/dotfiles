@@ -49,6 +49,14 @@ remove-domain-from-known-hosts() {
   sed -i "" "/$1/d" ~/.ssh/known_hosts
 }
 
+# Install Ghostty's terminfo system-wide on a remote host, so it also works
+# under sudo: ghostty-terminfo pi@lyra
+ghostty-terminfo() {
+  local remote_file
+  remote_file=$(infocmp -x xterm-ghostty | command ssh "$@" -- 'f=$(mktemp) && cat > "$f" && echo "$f"') || return
+  command ssh -t "$@" -- "sudo tic -x $remote_file; rm -f $remote_file"
+}
+
 # https://gist.github.com/lelandbatey/8677901
 whiteboard-digitize() {
   convert $1 -morphology Convolve DoG:15,100,0 -negate -normalize -blur 0x1 -channel RBG -level 60%,91%,0.1 $2
