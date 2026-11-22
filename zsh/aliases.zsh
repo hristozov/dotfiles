@@ -1,14 +1,12 @@
 # Contains useful aliases, which I use regularly in my workflows.
 
 alias b='brew'
-alias be='bundle exec'
 alias bu='bundle'
+alias bubu='brew update && brew upgrade'
 alias compress-bz2='tar --use-compress-program=pbzip2 -cvf'
 alias compress-gz='tar -czvf'
 alias compress-xz='tar --use-compress-program=pigz -cvf'
 alias c='cargo'
-alias ca='cursor agent'
-alias ce='cursor editor'
 alias cl='claude'
 alias co='code'
 alias ct='cargo test'
