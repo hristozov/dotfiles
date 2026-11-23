@@ -32,8 +32,12 @@ setup_nvm() {
 }
 
 setup_jenv() {
-  [[ -x "$HOME/.jenv/bin/jenv" ]] || return
-  path=("$HOME/.jenv/bin" $path)
+  if [[ -x "$HOME/.jenv/bin/jenv" ]]; then
+    path=("$HOME/.jenv/bin" $path)
+  elif ! command -v jenv &>/dev/null; then
+    return
+  fi
+
   eval "$(jenv init -)"
 }
 
