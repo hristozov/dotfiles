@@ -37,6 +37,9 @@ alias gstp='git stash pop'
 alias gwt='git worktree'
 alias gwtls='git worktree list'
 alias gwtrm='git worktree remove'
+alias gignore='git update-index --assume-unchanged'
+alias gunignore='git update-index --no-assume-unchanged'
+alias gignored='git ls-files -v | grep "^[[:lower:]]"'
 
 # My own.
 alias g='git'
@@ -61,13 +64,10 @@ alias gds='git diff --staged'
 alias gdsst='git diff --staged --stat'
 alias gdst='git diff --stat'
 alias gfu='git fetch upstream'
-alias git-ignore-file='git update-index --assume-unchanged'
 alias git-list-biggest-objects="git rev-list --objects --all | grep \"\$(git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -10 | awk '{print\$1}')\""
-alias git-list-ignored-files="git ls-files -v | grep '^[[:lower:]]'"
 alias git-prune-origin='git remote update origin --prune'
 alias git-prune-reflog='git reflog expire --expire=1.minute refs/heads/$(git_main_branch) && git fsck --unreachable && git prune && git gc'
 alias git-set-default-branch='git symbolic-ref HEAD refs/heads/'
-alias git-unignore-file='git update-index --no-assume-unchanged'
 alias glg='git lg'
 alias glmb='git log $(git merge-base HEAD origin/$(git_main_branch))..'
 alias glom='git pull origin $(git_main_branch)'
