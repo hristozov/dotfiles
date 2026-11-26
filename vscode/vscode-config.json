@@ -143,4 +143,5 @@
   "window.commandCenter": false,
   "workbench.layoutControl.enabled": false,
   "typescript.tsserver.log": "off",
+  "shellcheck.runtime": "wasm",
 }
